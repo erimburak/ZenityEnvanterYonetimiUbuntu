@@ -56,12 +56,19 @@ Kullanıcı adı ve şifre girerek sisteme giriş yapabilirsiniz. Yönetici ve k
 ### Ürün Yönetimi
 
 - **Ürün Ekleme:** Ürün bilgilerini girerek yeni ürün ekleyebilirsiniz.
+  
   ![Ekran Görüntüsü - 2025-01-05 23-20-47](https://github.com/user-attachments/assets/d07229a7-cb05-489b-88a0-2435c265fd20)
+  
 - **Ürün Listeleme:** Tüm ürünleri listeleyebilir ve detaylarını görebilirsiniz.
+  
   ![Ekran Görüntüsü - 2025-01-05 23-21-12](https://github.com/user-attachments/assets/e761fe75-8df7-4ee2-a9bc-88695747bfa9)
+  
 - **Ürün Güncelleme:** Mevcut ürün bilgilerini güncelleyebilirsiniz.
+  
   ![Ekran Görüntüsü - 2025-01-05 23-37-59](https://github.com/user-attachments/assets/5b88bff6-275d-4559-8774-ca04016ae90a)
+  
 - **Ürün Silme:** Bir ürünü envanterden kaldırabilirsiniz.
+  
   ![Ekran Görüntüsü - 2025-01-05 23-21-39](https://github.com/user-attachments/assets/4d43ac43-1905-4865-8585-1a889c492f7b)
 
 
