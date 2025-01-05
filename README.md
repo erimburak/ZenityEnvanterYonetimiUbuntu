@@ -1,125 +1,87 @@
-# ZenityEnvanterYonetimiUbuntu
+# Zenity Envanter Yönetimi Sistemi
 
-Bu proje, **Zenity** araçlarını kullanarak ürün ekleme, listeleme, güncelleme, silme ve raporlama gibi işlemleri gerçekleştiren kullanıcı dostu bir envanter yönetim sistemidir. Proje, kullanıcı rolleri ve veri doğrulama gibi özelliklerle geliştirilmiştir. Yönetici ve kullanıcıların farklı yetkilere sahip olduğu bu sistem, hem terminal kullanımı hem de görsel arayüz sağlama amacı taşır.
+Bu proje, Ubuntu işletim sisteminde Zenity araçlarını kullanarak kullanıcı dostu bir grafik arayüz sunan bir envanter yönetim sistemi geliştirmeyi amaçlamaktadır. Proje, ürün ve kullanıcı yönetimini destekleyen çeşitli özellikler sunar.
 
----
+## Proje Özellikleri
 
-## Özellikler
+- **Ürün Yönetimi:**
+  - Ürün ekleme, listeleme, güncelleme ve silme işlemleri.
+  - Raporlama: Stokta azalan ürünler ve en yüksek stok miktarına sahip ürünlerin raporlanması.
 
-### Kullanıcı Rolleri
-- **Yönetici:** Ürün ekleme, güncelleme, silme ve kullanıcı yönetimi yapabilir.
-- **Kullanıcı:** Ürünleri görüntüleyebilir ve rapor alabilir.
+- **Kullanıcı Yönetimi:**
+  - Yeni kullanıcı ekleme, listeleme, güncelleme ve silme işlemleri.
+  - Kullanıcı rolleri: Yönetici ve kullanıcı seviyesinde yetkilendirme.
 
-### Fonksiyonlar
-1. **Ürün Yönetimi**
-   - Ürün ekleme
-   - Ürün listeleme
-   - Ürün güncelleme
-   - Ürün silme
+- **Program Yönetimi:**
+  - Diskteki alanı görüntüleme.
+  - Veri dosyalarını yedekleme.
+  - Hata kayıtlarını görüntüleme.
 
-2. **Raporlama**
-   - Stokta azalan ürünler
-   - En yüksek stok miktarına sahip ürünler
+- **Güvenlik ve Doğrulama:**
+  - CSV dosyalarının kontrolü ve otomatik oluşturulması.
+  - Veri giriş doğrulaması.
+  - Hatalı işlemlerin loglanması ve kullanıcıya geri bildirim verilmesi.
 
-3. **Kullanıcı Yönetimi**
-   - Yeni kullanıcı ekleme
-   - Kullanıcı listeleme
-   - Kullanıcı güncelleme
-   - Kullanıcı silme
+## Gerekli Kurulumlar
 
-4. **Program Yönetimi**
-   - Diskteki alanı gösterme
-   - Veri dosyalarını yedekleme
-   - Hata kayıtlarını görüntüleme
+Projeyi çalıştırmak için aşağıdaki adımları izleyin:
 
-5. **Güvenlik ve Veri Doğrulama**
-   - Şifre yönetimi
-   - Veri girişinde doğrulama ve hata mesajları
-   - Kritik işlemler için onay penceresi
-
----
-
-## Kurulum
-
-1. **Gerekli Ortam:**
-   - Linux işletim sistemi
-   - Zenity kurulu olmalıdır.
-
-2. **Kurulum Adımları:**
+1. **Ubuntu Üzerinde Zenity Kurulumu:**
    ```bash
-   git clone https://github.com/kullaniciadi/inventory-management-system.git
-   cd inventory-management-system
-   chmod +x *.sh
+   sudo apt update
+   sudo apt install zenity
+   ```
+
+2. **Depoyu Klonlayın:**
+   ```bash
+   git clone https://github.com/erimburak/ZenityEnvanterYonetimiUbuntu.git
    ```
 
 3. **Çalıştırma:**
-   Ana menüyü çalıştırmak için:
+   Klonladığınız dizine giderek aşağıdaki komutu çalıştırın:
    ```bash
-   ./ana_menü.sh
+   ./ana_menu.sh
    ```
 
----
-
-## Kullanım
+## Sistem Kullanımı
 
 ### Giriş Ekranı
-Kullanıcı adı ve şifre ile sisteme giriş yapılır.
+
+Kullanıcı adı ve şifre girerek sisteme giriş yapabilirsiniz. Yönetici ve kullanıcı rollerine göre yetkilendirme yapılmaktadır.
 
 **Fotoğraf**
 
-### Ürün Ekleme
-Zenity'nin **--forms** seçeneği kullanılarak ürün bilgileri girilir ve kaydedilir.
+### Ürün Yönetimi
+
+- **Ürün Ekleme:** Ürün bilgilerini girerek yeni ürün ekleyebilirsiniz.
+- **Ürün Listeleme:** Tüm ürünleri listeleyebilir ve detaylarını görebilirsiniz.
+- **Ürün Güncelleme:** Mevcut ürün bilgilerini güncelleyebilirsiniz.
+- **Ürün Silme:** Bir ürünü envanterden kaldırabilirsiniz.
 
 **Fotoğraf**
 
-### Ürün Listeleme
-Zenity'nin **--text-info** seçeneği ile tüm ürünler görüntülenir.
+### Kullanıcı Yönetimi (Yalnızca Yönetici Yetkisiyle)
 
-**Fotoğraf**
-
-### Ürün Güncelleme
-Kullanıcıdan güncellenecek ürün bilgileri alınarak değişiklikler kaydedilir.
-
-**Fotoğraf**
-
-### Ürün Silme
-Zenity'nin **--question** seçeneği ile kullanıcıdan onay alınarak ürün silinir.
-
-**Fotoğraf**
-
-### Raporlama
-Stok durumu ile ilgili raporlar alınabilir.
-
-**Fotoğraf**
-
-### Kullanıcı Yönetimi
-Yönetici tarafından kullanıcı ekleme, güncelleme ve silme işlemleri yapılabilir.
+- Yeni kullanıcı ekleme, mevcut kullanıcıların bilgilerini güncelleme veya kullanıcıyı silme işlemleri yapılabilir.
 
 **Fotoğraf**
 
 ### Program Yönetimi
-Disk alanını görüntüleme, veri yedekleme ve hata kayıtlarını inceleme işlemleri yapılabilir.
+
+- **Diskteki Alanı Göster:** Sistem ve dosyaların kapladığı alanı görüntüler.
+- **Yedekleme:** Veri dosyalarını güvenli bir şekilde yedekler.
+- **Hata Kayıtları:** Sistem sırasında oluşan hataları görüntüler.
 
 **Fotoğraf**
 
----
-
-## Hata Yönetimi
-- Hatalar **log.csv** dosyasına kaydedilir.
-- Hatalar kullanıcıya **--error** mesajıyla bildirilir.
-
----
-
-## Video Anlatım
-Sistemin kullanımıyla ilgili video anlatımı için [buraya tıklayın](https://youtu.be/video-link).
-
----
-
 ## Lisans
-Bu proje MIT lisansı altında lisanslanmıştır.
+
+Bu proje MIT Lisansı ile lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasını inceleyebilirsiniz.
 
 ---
 
-## Katkıda Bulunma
-Katkılarınızı bekliyoruz! Lütfen bir pull request oluşturun veya issue açın.
+Geliştirici: [erimburak](https://github.com/erimburak)
 
+Projenin detaylı açıklaması ve kullanım videosu için aşağıdaki bağlantıya göz atabilirsiniz:
+
+[Youtube Tanıtım Videosu](#)
