@@ -98,4 +98,4 @@ Bu proje MIT Lisansı ile lisanslanmıştır. Daha fazla bilgi için LICENSE dos
 
 Projenin detaylı açıklaması ve kullanım videosu için aşağıdaki bağlantıya göz atabilirsiniz:
 
-[Youtube Tanıtım Videosu](#)
+[Youtube Tanıtım Videosu](#https://youtu.be/v-ujWBoUsRI)
